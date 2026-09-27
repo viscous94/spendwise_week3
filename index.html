@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget Tracker</title>
+
+    <!-- Google Fonts Import (Poppins for Headings, Inter for Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <!-- Header Card -->
+    <header class="header-card">
+        <h1>My Budget Tracker</h1>
+        <img src="Spendwise Logo.png" alt="A simple budget tracker logo" width="200" height="150">
+        <h2>Track your income and expenses in one place</h2>
+    </header>
+
+    <!-- Add Expense Form Card -->
+    <form>
+        <section id="add-expense-section">
+            <h2>Add an Expense</h2>
+
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name" name="expense-name" placeholder="e.g., Groceries">
+
+            <label for="expense-amount">Amount:</label>
+            <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g., 50">
+
+            <label for="expense-category">Category:</label>
+            <select id="expense-category" name="expense-category">
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="rent">Rent</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="expense-date">Date:</label>
+            <input type="date" id="expense-date" name="expense-date">
+
+            <button type="button">Add Expense</button>
+        </section>
+    </form>
+
+    <!-- Expense Table Card -->
+    <section id="expenses-section">
+        <h2>Your Expenses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Groceries</td>
+                    <td>$50</td>
+                    <td>Food</td>
+                    <td>16/08/2026</td>
+                </tr>
+                <tr>
+                    <td>Bus Fare</td>
+                    <td>$100</td>
+                    <td>Transport</td>
+                    <td>20/08/2026</td>
+                </tr>
+                <tr>
+                    <td>Accomodation</td>
+                    <td>$120</td>
+                    <td>Rent</td>
+                    <td>28/08/2026</td>
+                </tr>
+                <tr>
+                    <td>Netflix</td>
+                    <td>$30</td>
+                    <td>Entertainment</td>
+                    <td>25/08/2026</td>
+                </tr>
+                <tr>
+                    <td>Tuition Fee</td>
+                    <td>$150</td>
+                    <td>Other</td>
+                    <td>30/08/2026</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Video Section Card -->
+    <section class="video-section">
+        <h2>Learn More About Budgeting</h2>
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/LKxOamnP8J4"
+                title="Budgeting and the 50/30/20 Rule"
+                width="600"
+                height="338"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- How to Use This Tracker Card -->
+    <section class="how-to-use">
+        <details>
+            <summary>How to use this tracker</summary>
+            <p>
+                Use this form to record and keep track of your expenses.
+                Enter the details of each expense and click the
+                <strong>Add Expense</strong> button.
+            </p>
+            <ol>
+                <li>Enter the name of the expense.</li>
+                <li>Enter the amount you spent.</li>
+                <li>Select the expense category.</li>
+                <li>Select the date of the expense.</li>
+                <li>Click <strong>Add Expense</strong>.</li>
+            </ol>
+            <p>
+                Your recorded expenses will appear in the
+                <strong>Your Expenses</strong> table.
+            </p>
+        </details>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & COLOR PALETTE
+   Palette:
+     Slate-900  #0f172a  (headings / dark accents)
+     Slate-800  #1e293b  (table header)
+     Slate-700  #334155  (body text)
+     Slate-500  #64748b  (muted labels)
+     Slate-100  #f1f5f9  (page background / zebra rows)
+     Slate-50   #f8fafc  (alt card background)
+     Teal-700   #0f766e  (button hover)
+     Teal-600   #0d9488  (primary accent)
+     Teal-50    #f0fdfa  (soft accent surface)
+     White      #ffffff  (card surface)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 30px 15px;
+    line-height: 1.6;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #0f172a;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   2. BOX MODEL & CARD CONTAINER LAYOUTS
+   ========================================================================== */
+
+.header-card,
+#add-expense-section,
+#expenses-section,
+.video-section,
+.how-to-use {
+    max-width: 650px;
+    margin: 0 auto 24px auto;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05);
+}
+
+/* Neutral card surfaces with subtle teal accents for grouping */
+.header-card       { background-color: #ffffff; }
+#add-expense-section { background-color: #f0fdfa; } /* teal-50 */
+#expenses-section  { background-color: #f8fafc; }   /* slate-50 */
+.video-section     { background-color: #ffffff; }
+.how-to-use        { background-color: #ffffff; }
+
+/* ==========================================================================
+   3. FORM & INPUT STYLES
+   ========================================================================== */
+
+#add-expense-section label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+#add-expense-section input,
+#add-expense-section select {
+    width: 100%;
+    height: 42px;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #1e293b;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#add-expense-section input:focus,
+#add-expense-section select:focus {
+    outline: none;
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+    background-color: #ffffff;
+}
+
+/* Primary Form Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    background-color: #0d9488;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #0f766e;
+}
+
+button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.35);
+}
+
+/* ==========================================================================
+   4. TABLE STYLES
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1e293b;
+    color: #f8fafc;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 12px 16px;
+}
+
+td {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #334155;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+/* Alternating Row Colors (slate-based, palette-consistent) */
+tbody tr:nth-child(even) { background-color: #f1f5f9; }
+tbody tr:nth-child(odd)  { background-color: #ffffff; }
+
+/* Row Hover Effect */
+tbody tr:hover { background-color: #ccfbf1; }
+
+/* ==========================================================================
+   5. AUXILIARY SECTIONS (Video & Collapsible Details)
+   ========================================================================== */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.how-to-use summary {
+    color: #0f766e;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.how-to-use summary:hover { color: #0d9488; }
+
+.how-to-use p,
+.how-to-use ol {
+    margin-top: 12px;
+    color: #475569;
+}
+
+.how-to-use ol {
+    padding-left: 20px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE POLISH
+   ========================================================================== */
+
+@media (max-width: 480px) {
+    body { padding: 16px 10px; }
+
+    .header-card,
+    #add-expense-section,
+    #expenses-section,
+    .video-section,
+    .how-to-use {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.1rem; }
+
+    th, td { padding: 10px 12px; font-size: 0.85rem; }
+}
